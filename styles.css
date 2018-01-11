@@ -1,0 +1,25 @@
+.grid{
+  height:400px;
+  width:400px;
+  display:flex;
+  flex-flow:row wrap;
+}
+.box{
+  box-sizing: border-box;
+  height:200px;
+  width:200px;
+  border: 1px solid black;
+}
+
+.red{
+  background-color: red;
+}
+.blue{
+  background-color: blue;
+}
+.green{
+  background-color: green;
+}
+.yellow{
+  background-color: yellow;
+}
