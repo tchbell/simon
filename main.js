@@ -1,5 +1,5 @@
 //holds the computer logic for simon game
-let simonComputer = {
+const simonComputer = {
   //contains what round the game is currently on
   round: 0,
   //contains which cell was chosen by the computer
@@ -28,14 +28,36 @@ let simonComputer = {
   }
 };
 
+//player logic
+const player = {
+  moves: []
+}
+
 //holds the button handlers
-let handlers ={
+const handlers ={
   startBtn: function(){
     let startButton =  document.querySelector('.start');
     startButton.addEventListener('click', function(){
       simonComputer.round ++;
       simonComputer.gridChoice();
-    })
+    });
+  },
+  playerClick: function(){
+    let grid = document.querySelector('.grid');
+    grid.addEventListener('click', function(e){
+      if(e.target.className.includes("box")){
+        player.moves.push(e.target.id);
+        let cell = document.getElementById(e.target.id);
+        //adds highlighted class so player can see what cell was selected
+        cell.classList.add('highlighted');
+        //removes highlighted class so there is no visual confusion
+        setTimeout(function(){
+          cell.classList.remove('highlighted');
+        }, 220);
+        console.log(player.moves);
+      }
+    });
   }
 }
 handlers.startBtn();
+handlers.playerClick();

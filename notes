@@ -1,9 +1,1 @@
-What I want to accomplish
-
-When start is clicked simon picks a random color and highlights it. That cell is stored in an array so that the player can match the arrary contents later.
-
-Start button is clicked. Round number is increased by 1. 1 is passed into a funciton so it is only called once as many times as the round is
-
-computer makes random numbers selected to highlight each box;
-
-starts at 1 per round and increases once every round;
+when user clicks a cell that cells id is put in to the users my moves array
